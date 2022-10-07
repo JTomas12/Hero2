@@ -8,8 +8,15 @@ import com.googlecode.lanterna.terminal.Terminal;
 import java.io.IOException;
 
 public class Application {
-    Game classObj = new Game();
-    classObj.run();
+   public static void main(String[] args) {
+
+       try {
+           Game classObj = new Game(40, 20);
+           classObj.run();
+       } catch(IOException e) {
+           e.printStackTrace();
+       }
+   }
 
 }
 
